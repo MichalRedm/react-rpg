@@ -1,5 +1,63 @@
 {
   "title": "Some storyline",
-  "descripion": "Lorem ipsum dolor sit amet",
-  "events": []
+  "description": "Lorem ipsum dolor sit amet",
+  "events": [
+    {
+      "id": "start",
+      "title": "Welcome to PUT",
+      "text": "It's a normal day on Lecture Centre of Poznań University of Technology. You are casually walking near the dressing room, trying to get through the large crowd of students, when suddenly you hear a loud scream coming from somewhere, probably somewhere from the first floor. What do you do, adventurer?",
+      "options": [
+        {
+          "text": "Go to the first floor and see what's going on.",
+          "goto": "challenge-accepted"
+        },
+        {
+          "text": "Who cares? Let's just ignore this weird stuff.",
+          "goto": "lazy"
+        }
+      ]
+    },
+    {
+      "id": "challenge-accepted",
+      "title": "What is going on?",
+      "text": "You quickly run to the first floor. You look around, but at the first sight, nothing seems special. People normally sit at the desks on the corridor, looking at screens of their computers and don't even notice you. Suddenly, near the room L125 you see some weird-shaped object that vanishes behind the corner before you manage to see what it is. You go in this direction, and you see a girl crying in the corner.",
+      "options": [
+        {
+          "text": "Let's ask her what happened",
+          "goto": {
+            "test1": 0.5,
+            "test2": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "lazy",
+      "title": "You are lazy!",
+      "text": "Why are you playing this?",
+      "options": []
+    },
+    {
+      "id": "test1",
+      "title": "TEST #1",
+      "text": "",
+      "options": [
+        {
+          "text": "Go back in time",
+          "goto": "start"
+        }
+      ]
+    },
+    {
+      "id": "test2",
+      "title": "test #2",
+      "text": "",
+      "options": [
+        {
+          "text": "Go back in time",
+          "goto": "start"
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,17 @@
+.story-box {
+  max-width: 600px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: justify;
+  }
+
+  &__options-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+}

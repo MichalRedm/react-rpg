@@ -1,0 +1,14 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #111;
+  color: #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
