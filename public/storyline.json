@@ -28,6 +28,10 @@
             "girl-tells-a-story": 0.5,
             "girl-is-terrified": 0.5
           }
+        },
+        {
+          "text": "Let's just go further",
+          "goto": "meeting-the-creature"
         }
       ]
     },
