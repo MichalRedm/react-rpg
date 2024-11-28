@@ -37,26 +37,31 @@
       "text": "Why are you playing this game, adventurer, if you do not want to dive into the interesting and fun story? What a shame! Gods of the game have send you back to the beginning. You have a chance to fix your mistake."
     },
     {
-      "id": "test1",
-      "title": "girl-tells-a-story",
-      "text": "",
+      "id": "girl-tells-a-story",
+      "title": "Talking to a crying girl",
+      "text": "You approach the crying girl. \"What happened?\", you ask. She loooks at you with tears in her eyes and says: \"I have been attacked by an abnormal creature that was running through the hall. It had seven heads, seven legs and was made of large green sticks!\"",
       "options": [
         {
-          "text": "Go back in time",
-          "goto": "start"
+          "text": "Got that!",
+          "goto": "meeting-the-creature"
         }
       ]
     },
     {
-      "id": "test2",
-      "title": "girl-is-terrified",
-      "text": "",
+      "id": "girl-is-terrified",
+      "title": "Talking to a crying girl",
+      "text": "You approach the crying girl. \"What happened?\", you ask. She does not respond. You ask once again, but you receive no answer. She clearly seems extremely terrified.",
       "options": [
         {
-          "text": "Go back in time",
-          "goto": "start"
+          "text": "Let's go further",
+          "goto": "meeting-the-creature"
         }
       ]
+    },
+    {
+      "id": "meeting-the-creature",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet"
     },
     {
       "id": "death",
