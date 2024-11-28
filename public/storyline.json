@@ -1,6 +1,6 @@
 {
   "title": "Crazy story at PUT",
-  "description": "Something very, very strnge is happening at the Poznań University of Technology. Let's find out what is going on!",
+  "description": "Something very, very strange is happening at the Poznań University of Technology. Let's find out what is going on!",
   "events": [
     {
       "id": "start",
@@ -64,13 +64,117 @@
     },
     {
       "id": "meeting-the-creature",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet"
+      "title": "Epic clash",
+      "text": "You go in the direction in which you believe the creature has gone. You pass the library, go through a secret passage and get to a Bridge of Glass. Suddenly, you see it - a terrifying monster with no particular shape, green, made of huge segments, moving slowly in a chaotic way. It stops right in front of you and, despite it having no eyes, you feel like it is staring at you, ready to attack.",
+      "options": [
+        {
+          "text": "Do I know what is it?",
+          "goto": {
+            "you-know-what-is-it": 0.9,
+            "you-dont-know-what-is-it": 0.1
+          }
+        }
+      ]
     },
     {
-      "id": "death",
-      "title": "YOU DIED",
-      "text": "Go back to the very beginning of the game."
+      "id": "you-know-what-is-it",
+      "title": "You know what that thing is!",
+      "text": "It seems that you have a high insight and suddenly, all the dots connect and you recall a story told by some friends from the first year of AI about weird computer creatures Framsticks that were capable of evolving and were a nightmare for the students. If they were simulated though, how is it possible that you see one in a physical form in front of you? Surely, at some point of evolution on PUT supercomputers in the basement they must have become more than just a simulation!",
+      "options": [
+        {
+          "text": "OK, let's fight this thing!",
+          "goto": "rolling-a-dice"
+        }
+      ]
+    },
+    {
+      "id": "you-dont-know-what-is-it",
+      "title": "You don't know what that thing is!",
+      "text": "Oh no! Seems like your insight is too low! You have no idea what you are fighting against. Well, that's a pity, but you can still fight!",
+      "options": [
+        {
+          "text": "OK, let's fight this thing!",
+          "goto": "rolling-a-dice"
+        }
+      ]
+    },
+    {
+      "id": "rolling-a-dice",
+      "title": "Fight!",
+      "text": "You reach into your pocket. Fortunately, you find a 20-sided dice that you have from a DnD session with your friends last night. You roll it on the floor for an attack.",
+      "options": [
+        {
+          "text": "Let's see the result!",
+          "goto": {
+            "critical-failure": 0.2,
+            "critical-success": 0.3,
+            "medium-result": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "critical-failure",
+      "title": "Attack!",
+      "text": "You look at the dice. Oh no, it's 1 - the critical failure! You approach the creature and attempt to punch it in the face. However, the creature has no face and you accidentially punch yourself. You die!"
+    },
+    {
+      "id": "critical-success",
+      "title": "Attack!",
+      "text": "You look at the dice. Oh yes, it's 20 - the critical success. You approach the creature and punch it with such a strength that it literally dissolves into tiny pieces. The monster is defeated and the epic battle for PUT is won!",
+      "options": [
+        {
+          "text": "Amazing!",
+          "goto": "victory"
+        }
+      ]
+    },
+    {
+      "id": "medium-result",
+      "title": "Attack!",
+      "text": "You look at the dice. You've got 12. You punch the creature with a solid strength. The creature shakes and runs, disappearing behind the corner.",
+      "options": [
+        {
+          "text": "Let's follow it",
+          "goto": "evolution"
+        }
+      ]
+    },
+    {
+      "id": "evolution",
+      "title": "Oh no!",
+      "text": "You follow the creature. You turn right and in the corridor, you see it once again. However, something has changed. There is no sign of damage from your encounter a few moments back. The monster is about 3 times larger - it must have evolved! And it seems very, very angry! What do you do, adventurer?",
+      "options": [
+        {
+          "text": "Retreat!",
+          "goto": "retreat"
+        },
+        {
+          "text": "Let's attack it once again!",
+          "goto": "fight-with-no-chances"
+        }
+      ]
+    },
+    {
+      "id": "retreat",
+      "title": "Retreat!",
+      "text": "You run away, choosing the same path with which you reached this place. You hear heavy steps of the creature right behind you. You pass the Bridge of Glass. Suddenly, you hear loud cracks. You turn around and see that the creature is so heavy now that the bridge collapses. The createure falls to its death. The battle for PUT is won!",
+      "options": [
+        {
+          "text": "Amazing!",
+          "goto": "victory"
+        }
+      ]
+    },
+    {
+      "id": "fight-with-no-chances",
+      "title": "Attack!",
+      "text": "You try to punch it once again, but before you roll your dice to see how strong the punch will be, the creature grabs you with its green arm (if you can call it so) and throws you very far. You fall and die!"
+    },
+    {
+      "id": "victory",
+      "title": "Congratulations!",
+      "text": "The physical embodiment of framsticks have been stopped from evolving and overtaking the Poznań University of Technology, and later maybe even the entire world. You are the true hero, adventurer. As a reward, you receive the honorable title of Professor of RPG."
     }
   ]
 }
