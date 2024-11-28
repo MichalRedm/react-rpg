@@ -1,17 +1,43 @@
+@use "./styles/colors" as *;
+@use "./styles/animations" as *;
+
+@mixin fade-in-animation($delay: 0) {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: $delay;
+}
+
 .story-box {
   max-width: 600px;
 
   &__title {
     text-align: center;
+    @include fade-in-animation();
   }
 
   &__description {
     text-align: justify;
+    @include fade-in-animation(1.5s);
   }
 
   &__options-container {
     display: flex;
     justify-content: center;
     gap: 8px;
+    @include fade-in-animation(4s);
+  }
+
+  &__option {
+    border: 1px solid $txt-color;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    transition: all 0.1s;
+
+    &:hover {
+      background-color: $txt-color;
+      color: $bg-color;
+    }
   }
 }

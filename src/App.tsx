@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-    <div className="story-box">
+    <div className="story-box" key={currentEventId}>
       {
         storyline !== null
         ? (
