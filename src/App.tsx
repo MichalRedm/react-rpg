@@ -24,8 +24,10 @@ function App() {
 
   const selectOption = (option: StorylineOption) => {
     if (typeof option.goto === "string") {
+      // Single possible scenario
       setCurrentEventId(option.goto);
     } else {
+      // Multiple scenarios with different probabilities
       let random = Math.random();
       for (const [id, probability] of Object.entries(option.goto)) {
         if (probability > random) {
@@ -88,7 +90,7 @@ function App() {
             )
         )
         : (
-          <p>Loading</p>
+          <p>Loading...</p>
         )
       }
     </div>
