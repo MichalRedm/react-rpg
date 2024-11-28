@@ -64,7 +64,7 @@ function App() {
                 <h2 className="story-box__title">{currentEvent.title}</h2>
                 <p className="story-box__description">{currentEvent.text}</p>
                 <div className="story-box__options-container">
-                  {currentEvent.options.length > 0
+                  {currentEvent.options && currentEvent.options.length > 0
                     ? (
                       currentEvent.options.map((option, index) =>
                         <button

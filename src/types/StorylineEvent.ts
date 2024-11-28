@@ -4,7 +4,7 @@ interface StorylineEvent {
   id: string;
   title: string;
   text: string;
-  options: StorylineOption[];
+  options?: StorylineOption[];
 }
 
 export default StorylineEvent;

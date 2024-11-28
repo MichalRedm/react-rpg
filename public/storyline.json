@@ -25,8 +25,8 @@
         {
           "text": "Let's ask her what happened",
           "goto": {
-            "test1": 0.5,
-            "test2": 0.5
+            "girl-tells-a-story": 0.5,
+            "girl-is-terrified": 0.5
           }
         }
       ]
@@ -34,12 +34,11 @@
     {
       "id": "lazy",
       "title": "You are lazy!",
-      "text": "Why are you playing this?",
-      "options": []
+      "text": "Why are you playing this game, adventurer, if you do not want to dive into the interesting and fun story? What a shame! Gods of the game have send you back to the beginning. You have a chance to fix your mistake."
     },
     {
       "id": "test1",
-      "title": "TEST #1",
+      "title": "girl-tells-a-story",
       "text": "",
       "options": [
         {
@@ -50,7 +49,7 @@
     },
     {
       "id": "test2",
-      "title": "test #2",
+      "title": "girl-is-terrified",
       "text": "",
       "options": [
         {
@@ -58,6 +57,11 @@
           "goto": "start"
         }
       ]
+    },
+    {
+      "id": "death",
+      "title": "YOU DIED",
+      "text": "Go back to the very beginning of the game."
     }
   ]
 }
