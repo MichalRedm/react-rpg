@@ -62,15 +62,27 @@ function App() {
                 <h2 className="story-box__title">{currentEvent.title}</h2>
                 <p className="story-box__description">{currentEvent.text}</p>
                 <div className="story-box__options-container">
-                  {currentEvent.options.map((option, index) =>
-                    <button
-                      key={index}
-                      onClick={() => selectOption(option)}
-                      className="story-box__option"
-                    >
-                      {option.text}
-                    </button>
-                  )}
+                  {currentEvent.options.length > 0
+                    ? (
+                      currentEvent.options.map((option, index) =>
+                        <button
+                          key={index}
+                          onClick={() => selectOption(option)}
+                          className="story-box__option"
+                        >
+                          {option.text}
+                        </button>
+                      )
+                    )
+                    : (
+                      <button
+                        onClick={() => setCurrentEventId(null)}
+                        className="story-box__option"
+                      >
+                        Reset
+                      </button>
+                    )
+                  }
                 </div>
               </>
             )
